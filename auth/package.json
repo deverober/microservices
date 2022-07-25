@@ -18,11 +18,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "config": {
-    "mongodbMemoryServer": {
-      "version": "v4.4-latest"
-    }
-  },
   "dependencies": {
     "@deverober/common": "^1.0.16",
     "@types/cookie-session": "^2.0.44",

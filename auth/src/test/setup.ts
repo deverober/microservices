@@ -11,7 +11,6 @@ declare global {
 
 beforeAll(async () => {
 	console.log("Starting tests");
-
 	process.env.JWT_KEY = "test-key-1234";
 	mongo = await MongoMemoryServer.create();
 	const mongoUri = mongo.getUri();
@@ -29,7 +28,9 @@ beforeEach(async () => {
 });
 
 afterAll(async () => {
-	await mongo.stop();
+	if (mongo) {
+		await mongo.stop();
+	}
 	await mongoose.connection.close();
 });
 
