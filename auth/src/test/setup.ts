@@ -10,7 +10,6 @@ declare global {
 }
 
 beforeAll(async () => {
-	console.log("Starting tests");
 	process.env.JWT_KEY = "test-key-1234";
 	mongo = await MongoMemoryServer.create();
 	const mongoUri = mongo.getUri();
